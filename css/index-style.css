@@ -3,7 +3,7 @@
 @media (prefers-color-scheme: light){
   :root {
     --white: #ffffff;
-    --black: #000000;
+    --black: #c66464;
     --bg: var(--white);
     --txt: var(--black);
   }

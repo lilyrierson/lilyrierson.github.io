@@ -64,7 +64,7 @@ h1{
   font-variation-settings: "wdth" 125;
   font-size: 6rem;
   line-height: 1px;
-  color: var(--txt);
+  color: blue;
 }
 
 h2{

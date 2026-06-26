@@ -3,7 +3,7 @@
 @media (prefers-color-scheme: light){
   :root {
     --white: #ffffff;
-    --black: #c66464;
+    --black: #000000;
     --bg: var(--white);
     --txt: var(--black);
   }
@@ -12,7 +12,7 @@
 @media (prefers-color-scheme: dark){
   :root {
     --white: #000000;
-    --black: #913030;
+    --black: #ffffff;
     --bg: var(--white);
     --txt: var(--black);
   }

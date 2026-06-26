@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Michroma&display=swap');
+
+@media (prefers-color-scheme: light){
+  :root {
+    --white: #ffffff;
+    --black: #000000;
+    --bg: var(--white);
+    --txt: var(--black);
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  :root {
+    --white: #000000;
+    --black: #ffffff;
+    --bg: var(--white);
+    --txt: var(--black);
+  }
+}
+
+* {
+  transition: all .25s;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  background-color: var(--bg);
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    "menu content";
+  grid-template-columns: 1fr 2fr;
+  margin: 0 3rem 3rem;
+  gap: 1rem;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+  font-family: "Archivo", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "wdth" 125;
+  font-size: 6rem;
+  line-height: 1px;
+  color: var(--txt);
+}
+
+h2{
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "wdth" 125;
+  font-size: 3rem;
+  line-height: 1px;
+  color: var(--txt);
+}
+
+h3{
+  color: var(--txt);
+  font-family: Michroma;
+  font-size: 1.3rem;
+  letter-spacing: 30%;
+  font-weight: 400;
+}
+
+@media (prefers-color-scheme: light){
+  .logo-light-mode{
+    display: block;
+  }
+
+  .logo-dark-mode{
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  .logo-light-mode{
+    display: none;
+  }
+
+  .logo-dark-mode{
+    display: block;
+  }
+}
+
+.project-name{
+  color: var(--txt);
+  font-family: Michroma;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 30%;
+  padding-bottom: .8rem;
+}
+
+.menu{
+  height: calc(100vh - 5.6rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 2.8rem;
+}
+
+.checkbox{
+  margin-right: auto;
+}
+
+.site-preview{
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  padding: 0 0 1rem 0;
+}
+
+.visit, .visit:link, .visit:visited{
+  color: var(--txt);
+  width: fit-content;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: Michroma;
+  padding: 11px 25px;
+  border-radius: 25.5px;
+  border: 2px solid var(--txt);
+}
+
+.visit:hover, .visit:active{
+  color: var(--bg);
+  background-color: var(--txt);
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: var(--txt);
+  margin: 1rem 0 0 0;
+  width: 100%;
+}
+
+.dark-mode {
+    --txt: var(--white);
+    --bg: var(--black);
+}
+
+@media (prefers-color-scheme: light){
+  
+  .dark-mode .logo-dark-mode{
+    display: block;
+  }
+
+  .dark-mode .logo-light-mode{
+    display: none;
+}
+}
+
+@media (prefers-color-scheme: dark){
+  
+  .dark-mode .logo-dark-mode{
+    display: none;
+  }
+
+  .dark-mode .logo-light-mode{
+    display: block;
+  }
+}
+
+.switch{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 5.625rem;
+  height: 3.1875rem;
+  border-radius: 25.5px;
+  border: 2px solid var(--txt);
+  margin: 0;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::after {
+  content: "";
+  margin-left: 5px;
+  width: calc(3.1875rem - 10px);
+  height: calc(3.1875rem - 10px);
+  background-color: var(--txt);
+  border-radius: 50%;
+  transition: all .25s;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked::after {
+  margin-left: calc(3.1875rem - 10px);
+}
+
+
+h4{
+  margin: 0;
+  color: var(--txt);
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: Michroma;
+}
